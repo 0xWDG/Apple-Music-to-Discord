@@ -2,7 +2,7 @@
 <img width="305" alt="image" src="https://github.com/0xWDG/Apple-Music-to-Discord/assets/1290461/f4c404da-7d1a-4a54-b281-cf3aaa63413e"><br />
 Display your Apple Music play status to Discord.
 
-<a href='AM2D.zip' target='_blank'>
+<a href='https://github.com/0xWDG/Apple-Music-to-Discord/raw/main/AM2D.zip'>
   <img alt="Download" src="https://img.shields.io/badge/Download-Beta-6bbee8?style=for-the-badge">
  </a>
  
