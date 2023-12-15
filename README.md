@@ -21,10 +21,12 @@ Display your Apple Music play status to Discord.
 > **Notice**:\
 > Since this is a beta product, follow the steps below carefully to use this. this requirement will be removed/fixed in a future version
 
-1. Open Discord
-2. Open Apple Music
-3. Open AM2D.app
-4. Wait and see your status being updated
+1. ~~Open Discord~~
+2. ~~Open Apple Music~~
+3. ~~Open AM2D.app~~
+4. ~~Wait and see your status being updated~~
+
+**Update (15-DEC-2023):** This should be fixed, this how to use stays until i'm sure it is fixed.
 
 # Screenshots
 
@@ -64,6 +66,10 @@ Alternatively you can visit my [Website](https://wesleydegroot.nl) or my [Blog](
   <summary>15-DEC-2023</summary>
   &bull; Play/Pause, Previous and Next buttons are working<br />
   &bull; Fixes remaining time being incorrectly after switching to a new song<br>
-  &bull; Updated GUI a little bit.
+  &bull; Updated GUI a little bit.<br>
+  <strong>Revision 1</strong><br>
+  &bull; Retry if Discord is not found.<br>
+  &bull; Check if Apple Music is running.<br>
+  &bull; Remove requirement to start everything in a particulair order.
 </details>
 <details><summary>05-DEC-2023</summary>&bull; Initial version.</details>
