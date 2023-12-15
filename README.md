@@ -11,8 +11,8 @@ Display your Apple Music play status to Discord.
 - [x] Update Discord presence to show information
 - [x] Fetch album art
 - [ ] Support Indicator for Stopped/Playing/Pause status
-- [ ] Remove requirement to start Discord first (retry connecting when failed)
-- [ ] Check if Apple Music has started, for initial song info (now the song info will be fetched when connected to Discord)
+- [x] Remove requirement to start Discord first (retry connecting when failed)
+- [x] Check if Apple Music has started, for initial song info (now the song info will be fetched when connected to Discord)
 - [x] Make `<` (back), `=` (pause), `>` (next) buttons work.
 - [x] ~~Remove spinner if loading of artwork fails.~~ Spinner now have the same size as the artwork, and will hide if failed.
 - [ ] Support auto start at login
@@ -21,10 +21,12 @@ Display your Apple Music play status to Discord.
 > **Notice**:\
 > Since this is a beta product, follow the steps below carefully to use this. this requirement will be removed/fixed in a future version
 
-1. Open Discord
-2. Open Apple Music
-3. Open AM2D.app
-4. Wait and see your status being updated
+1. ~~Open Discord~~
+2. ~~Open Apple Music~~
+3. ~~Open AM2D.app~~
+4. ~~Wait and see your status being updated~~
+
+**Update (15-DEC-2023):** This should be fixed, this how to use stays until i'm sure it is fixed.
 
 # Screenshots
 
@@ -64,6 +66,10 @@ Alternatively you can visit my [Website](https://wesleydegroot.nl) or my [Blog](
   <summary>15-DEC-2023</summary>
   &bull; Play/Pause, Previous and Next buttons are working<br />
   &bull; Fixes remaining time being incorrectly after switching to a new song<br>
-  &bull; Updated GUI a little bit.
+  &bull; Updated GUI a little bit.<br>
+  <strong>Revision 1</strong><br>
+  &bull; Retry if Discord is not found.<br>
+  &bull; Check if Apple Music is running.<br>
+  &bull; Remove requirement to start everything in a particulair order.
 </details>
 <details><summary>05-DEC-2023</summary>&bull; Initial version.</details>
