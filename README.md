@@ -11,8 +11,8 @@ Display your Apple Music play status to Discord.
 - [x] Update Discord presence to show information
 - [x] Fetch album art
 - [ ] Support Indicator for Stopped/Playing/Pause status
-- [ ] Remove requirement to start Discord first (retry connecting when failed)
-- [ ] Check if Apple Music has started, for initial song info (now the song info will be fetched when connected to Discord)
+- [x] Remove requirement to start Discord first (retry connecting when failed)
+- [x] Check if Apple Music has started, for initial song info (now the song info will be fetched when connected to Discord)
 - [x] Make `<` (back), `=` (pause), `>` (next) buttons work.
 - [x] ~~Remove spinner if loading of artwork fails.~~ Spinner now have the same size as the artwork, and will hide if failed.
 - [ ] Support auto start at login
