@@ -54,7 +54,7 @@ Please [create an issue](https://github.com/0xWDG/Apple-Music-to-Discord/issues/
 
 # Contact
 
-We can get in touch via [Twitter/X](https://twitter.com/0xWDG), [Mastodon](https://iosdev.space/@0xWDG), [Threads](http://threads.net/@0xwdg), [Bluesky](https://bsky.app/profile/0xwdg.bsky.social).
+We can get in touch via [Twitter/X](https://twitter.com/0xWDG), [Discord](https://discordapp.com/users/918438083861573692), [Mastodon](https://iosdev.space/@0xWDG), [Threads](http://threads.net/@0xwdg), [Bluesky](https://bsky.app/profile/0xwdg.bsky.social).
 
 Alternatively you can visit my [Website](https://wesleydegroot.nl) or my [Blog](https://wdg.codes)
 
