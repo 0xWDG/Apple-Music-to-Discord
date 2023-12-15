@@ -13,8 +13,8 @@ Display your Apple Music play status to Discord.
 - [ ] Support Indicator for Stopped/Playing/Pause status
 - [ ] Remove requirement to start Discord first (retry connecting when failed)
 - [ ] Check if Apple Music has started, for initial song info (now the song info will be fetched when connected to Discord)
-- [ ] Make `<` (back), `=` (pause), `>` (next) buttons work.
-- [ ] Remove spinner if loading of artwork fails.
+- [x] Make `<` (back), `=` (pause), `>` (next) buttons work.
+- [x] ~~Remove spinner if loading of artwork fails.~~ Spinner now have the same size as the artwork, and will hide if failed.
 - [ ] Support auto start at login
 
 # How to use 
@@ -48,13 +48,22 @@ Display your Apple Music play status to Discord.
 
 <details><summary>Will this app come to the App Store?</summary>Probably not since it does not work with the sandbox being enabled.</details>
 
-
 # Support / Bug reporting.
 
-Please create an issue above.
+Please [create an issue](https://github.com/0xWDG/Apple-Music-to-Discord/issues/new).
 
 # Contact
 
-We can get in touch via [Twitter/X](https://twitter.com/0xWDG), [Mastodon](https://iosdev.space/@0xWDG), [Bluesky](https://bsky.app/profile/0xwdg.bsky.social).
+We can get in touch via [Twitter/X](https://twitter.com/0xWDG), [Mastodon](https://iosdev.space/@0xWDG), [Threads](http://threads.net/@0xwdg), [Bluesky](https://bsky.app/profile/0xwdg.bsky.social).
 
 Alternatively you can visit my [Website](https://wesleydegroot.nl) or my [Blog](https://wdg.codes)
+
+# Changes
+
+<details>
+  <summary>15-DEC-2023</summary>
+  &bull; Play/Pause, Previous and Next buttons are working<br />
+  &bull; Fixes remaining time being incorrectly after switching to a new song<br>
+  &bull; Updated GUI a little bit.
+</details>
+<details><summary>05-DEC-2023</summary>&bull; Initial version.</details>
