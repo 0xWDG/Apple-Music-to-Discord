@@ -1,0 +1,452 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 54;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2B4D36032CE9F116002D9C00 /* itunesSearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B4D36012CE9F116002D9C00 /* itunesSearch.swift */; };
+		2B4D36042CE9F116002D9C00 /* CurrentSongStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B4D36002CE9F116002D9C00 /* CurrentSongStruct.swift */; };
+		2B4D36082CE9F129002D9C00 /* iTunesApplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B4D36052CE9F129002D9C00 /* iTunesApplication.swift */; };
+		2B4D36092CE9F129002D9C00 /* MusicBridge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B4D36062CE9F129002D9C00 /* MusicBridge.swift */; };
+		2B4D360D2CE9F13D002D9C00 /* SharedData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B4D360B2CE9F13D002D9C00 /* SharedData.swift */; };
+		2B4D360E2CE9F13D002D9C00 /* CurrentSong.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B4D360A2CE9F13D002D9C00 /* CurrentSong.swift */; };
+		2B4D36102CE9F30E002D9C00 /* DISCORD_API_KEY.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B4D360F2CE9F30E002D9C00 /* DISCORD_API_KEY.swift */; };
+		6695137F2516B047002ECA43 /* AM2DApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6695137E2516B047002ECA43 /* AM2DApp.swift */; };
+		669513812516B047002ECA43 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 669513802516B047002ECA43 /* ContentView.swift */; };
+		669513832516B047002ECA43 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 669513822516B047002ECA43 /* Assets.xcassets */; };
+		669513862516B047002ECA43 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 669513852516B047002ECA43 /* Preview Assets.xcassets */; };
+		66DE0C1E2564B751002FDE99 /* SwordRPC in Frameworks */ = {isa = PBXBuildFile; productRef = 66DE0C1D2564B751002FDE99 /* SwordRPC */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		2B4D36002CE9F116002D9C00 /* CurrentSongStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentSongStruct.swift; sourceTree = "<group>"; };
+		2B4D36012CE9F116002D9C00 /* itunesSearch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = itunesSearch.swift; sourceTree = "<group>"; };
+		2B4D36052CE9F129002D9C00 /* iTunesApplication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iTunesApplication.swift; sourceTree = "<group>"; };
+		2B4D36062CE9F129002D9C00 /* MusicBridge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicBridge.swift; sourceTree = "<group>"; };
+		2B4D360A2CE9F13D002D9C00 /* CurrentSong.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentSong.swift; sourceTree = "<group>"; };
+		2B4D360B2CE9F13D002D9C00 /* SharedData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedData.swift; sourceTree = "<group>"; };
+		2B4D360F2CE9F30E002D9C00 /* DISCORD_API_KEY.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DISCORD_API_KEY.swift; sourceTree = "<group>"; };
+		660799B02564CD36005FC244 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		660799B12564CE30005FC244 /* LICENSE.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = LICENSE.md; sourceTree = "<group>"; };
+		6695137B2516B047002ECA43 /* AM2D.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AM2D.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		6695137E2516B047002ECA43 /* AM2DApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AM2DApp.swift; sourceTree = "<group>"; };
+		669513802516B047002ECA43 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		669513822516B047002ECA43 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		669513852516B047002ECA43 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		669513872516B047002ECA43 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		669513882516B047002ECA43 /* AM2D.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = AM2D.entitlements; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		669513782516B047002ECA43 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				66DE0C1E2564B751002FDE99 /* SwordRPC in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2B4D36022CE9F116002D9C00 /* Codables */ = {
+			isa = PBXGroup;
+			children = (
+				2B4D36002CE9F116002D9C00 /* CurrentSongStruct.swift */,
+				2B4D36012CE9F116002D9C00 /* itunesSearch.swift */,
+			);
+			path = Codables;
+			sourceTree = "<group>";
+		};
+		2B4D36072CE9F129002D9C00 /* Scripting Bridge */ = {
+			isa = PBXGroup;
+			children = (
+				2B4D36052CE9F129002D9C00 /* iTunesApplication.swift */,
+				2B4D36062CE9F129002D9C00 /* MusicBridge.swift */,
+			);
+			path = "Scripting Bridge";
+			sourceTree = "<group>";
+		};
+		2B4D360C2CE9F13D002D9C00 /* Observables */ = {
+			isa = PBXGroup;
+			children = (
+				2B4D360A2CE9F13D002D9C00 /* CurrentSong.swift */,
+				2B4D360B2CE9F13D002D9C00 /* SharedData.swift */,
+			);
+			path = Observables;
+			sourceTree = "<group>";
+		};
+		669513722516B047002ECA43 = {
+			isa = PBXGroup;
+			children = (
+				660799B12564CE30005FC244 /* LICENSE.md */,
+				660799B02564CD36005FC244 /* README.md */,
+				6695137D2516B047002ECA43 /* AM2D */,
+				6695137C2516B047002ECA43 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		6695137C2516B047002ECA43 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6695137B2516B047002ECA43 /* AM2D.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		6695137D2516B047002ECA43 /* AM2D */ = {
+			isa = PBXGroup;
+			children = (
+				669513882516B047002ECA43 /* AM2D.entitlements */,
+				6695137E2516B047002ECA43 /* AM2DApp.swift */,
+				669513822516B047002ECA43 /* Assets.xcassets */,
+				2B4D36022CE9F116002D9C00 /* Codables */,
+				669513802516B047002ECA43 /* ContentView.swift */,
+				669513872516B047002ECA43 /* Info.plist */,
+				2B4D360C2CE9F13D002D9C00 /* Observables */,
+				669513842516B047002ECA43 /* Preview Content */,
+				2B4D36072CE9F129002D9C00 /* Scripting Bridge */,
+				2B4D360F2CE9F30E002D9C00 /* DISCORD_API_KEY.swift */,
+			);
+			path = AM2D;
+			sourceTree = "<group>";
+		};
+		669513842516B047002ECA43 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				669513852516B047002ECA43 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		6695137A2516B047002ECA43 /* AM2D */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6695138B2516B047002ECA43 /* Build configuration list for PBXNativeTarget "AM2D" */;
+			buildPhases = (
+				669513772516B047002ECA43 /* Sources */,
+				669513782516B047002ECA43 /* Frameworks */,
+				669513792516B047002ECA43 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AM2D;
+			packageProductDependencies = (
+				66DE0C1D2564B751002FDE99 /* SwordRPC */,
+			);
+			productName = AM2D;
+			productReference = 6695137B2516B047002ECA43 /* AM2D.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		669513732516B047002ECA43 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastSwiftUpdateCheck = 1200;
+				LastUpgradeCheck = 1500;
+				TargetAttributes = {
+					6695137A2516B047002ECA43 = {
+						CreatedOnToolsVersion = 12.0;
+						LastSwiftMigration = 1220;
+					};
+				};
+			};
+			buildConfigurationList = 669513762516B047002ECA43 /* Build configuration list for PBXProject "AM2D" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 669513722516B047002ECA43;
+			packageReferences = (
+				66DE0C1C2564B751002FDE99 /* XCRemoteSwiftPackageReference "SwordRPC" */,
+			);
+			productRefGroup = 6695137C2516B047002ECA43 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				6695137A2516B047002ECA43 /* AM2D */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		669513792516B047002ECA43 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				669513862516B047002ECA43 /* Preview Assets.xcassets in Resources */,
+				669513832516B047002ECA43 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		669513772516B047002ECA43 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2B4D36082CE9F129002D9C00 /* iTunesApplication.swift in Sources */,
+				2B4D36092CE9F129002D9C00 /* MusicBridge.swift in Sources */,
+				2B4D360D2CE9F13D002D9C00 /* SharedData.swift in Sources */,
+				2B4D360E2CE9F13D002D9C00 /* CurrentSong.swift in Sources */,
+				2B4D36102CE9F30E002D9C00 /* DISCORD_API_KEY.swift in Sources */,
+				669513812516B047002ECA43 /* ContentView.swift in Sources */,
+				6695137F2516B047002ECA43 /* AM2DApp.swift in Sources */,
+				2B4D36032CE9F116002D9C00 /* itunesSearch.swift in Sources */,
+				2B4D36042CE9F116002D9C00 /* CurrentSongStruct.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		669513892516B047002ECA43 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_APP_SANDBOX = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		6695138A2516B047002ECA43 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_APP_SANDBOX = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		6695138C2516B047002ECA43 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = AM2D/AM2D.entitlements;
+				CODE_SIGN_IDENTITY = "-";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
+				DEVELOPMENT_ASSET_PATHS = "\"AM2D/Preview Content\"";
+				DEVELOPMENT_TEAM = 4V2D72S45C;
+				ENABLE_APP_SANDBOX = NO;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = AM2D/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = " Music 2 Discord";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.music";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = nl.wesleydegroot.AM2D;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_INSTALL_OBJC_HEADER = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		6695138D2516B047002ECA43 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = AM2D/AM2D.entitlements;
+				CODE_SIGN_IDENTITY = "-";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
+				DEVELOPMENT_ASSET_PATHS = "\"AM2D/Preview Content\"";
+				DEVELOPMENT_TEAM = 4V2D72S45C;
+				ENABLE_APP_SANDBOX = NO;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = AM2D/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = " Music 2 Discord";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.music";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = nl.wesleydegroot.AM2D;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_INSTALL_OBJC_HEADER = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		669513762516B047002ECA43 /* Build configuration list for PBXProject "AM2D" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				669513892516B047002ECA43 /* Debug */,
+				6695138A2516B047002ECA43 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6695138B2516B047002ECA43 /* Build configuration list for PBXNativeTarget "AM2D" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6695138C2516B047002ECA43 /* Debug */,
+				6695138D2516B047002ECA43 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		66DE0C1C2564B751002FDE99 /* XCRemoteSwiftPackageReference "SwordRPC" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/A-da-m/SwordRPC";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.2.3;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		66DE0C1D2564B751002FDE99 /* SwordRPC */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 66DE0C1C2564B751002FDE99 /* XCRemoteSwiftPackageReference "SwordRPC" */;
+			productName = SwordRPC;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = 669513732516B047002ECA43 /* Project object */;
+}
