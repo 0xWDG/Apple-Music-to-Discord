@@ -1,5 +1,5 @@
 //
-//  File.swift
+//  AM2DApp.swift
 //  AM2D
 //
 //  Created by Wesley de Groot on 01/12/2023.
@@ -47,7 +47,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     var sharedData: SharedData = .init()
 
     @objc
-    func updateTrack (notification: NSNotification) {
+    func updateTrack(notification: NSNotification) {
         DispatchQueue.global(qos: .background).async {
             if let info = notification.userInfo {
                 var presence = RichPresence()
@@ -56,44 +56,39 @@ class AppDelegate: NSObject, NSApplicationDelegate {
                 let name = info["Name"] as? String ?? "Unknown"
                 let artist = info["Artist"] as? String ?? "Unknown"
                 let album = info["Album"] as? String ?? "Unknown"
-                let playerState = info["Player State"] as? String ?? "Unknown"
+                let playbackState = PlaybackState(
+                    notificationValue: info["Player State"] as? String ?? "Stopped"
+                )
                 let totalTime = info["Total Time"] as? Int ?? 0
 
-                if playerState == "Playing" {
-                    DispatchQueue.main.async {
-                        self.sharedData.isPlaying = true
-                    }
-                    presence.details = name
+                presence.details = "\(playbackState.indicator) \(name)"
+                presence.assets.smallImage = playbackState.discordAssetName
+                presence.assets.smallText = playbackState.rawValue
+
+                if playbackState == .playing {
                     let endsAt = Double(totalTime) / 1000
                     presence.timestamps.start = Int(Date().timeIntervalSince1970)
                     presence.timestamps.end = Int((Date() + endsAt).timeIntervalSince1970)
-                } else {
-                    DispatchQueue.main.async {
-                        self.sharedData.isPlaying = false
-                    }
-                    presence.details = "⏸︎ \(name)"
-                    presence.assets.smallImage = "pause"
-                    presence.assets.smallText = "Paused"
                 }
                 presence.state = artist
 
                 if let image = self.getImage(forAlbum: album, fromArtist: artist) {
                     presence.assets.largeImage = image
-                    presence.assets.smallImage = "am"
                 } else {
                     presence.assets.largeImage = "am"
-                    presence.assets.smallImage = nil
                 }
 
                 presence.assets.largeText = (artist + " - " + album)
 
                 DispatchQueue.main.async {
+                    self.sharedData.playbackState = playbackState
+                    self.updateStatusItem(for: playbackState)
                     self.currentSong.set(
                         name: name,
                         album: album,
                         artist: artist,
                         image: presence.assets.largeImage!,
-                        state: playerState,
+                        state: playbackState.rawValue,
                         time: totalTime
                     )
                 }
@@ -129,10 +124,13 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         popover.animates = false
         popover.contentViewController = NSViewController()
         popover.contentViewController?.view = NSHostingView(rootView: contentView)
-        
+
         statusBarItem = NSStatusBar.system.statusItem(withLength: NSStatusItem.variableLength)
-        statusBarItem?.button?.title = "M2D"
-        statusBarItem?.button?.action = #selector(AppDelegate.togglePopover(_:))
+        if let button = statusBarItem?.button {
+            button.action = #selector(AppDelegate.togglePopover(_:))
+            button.setAccessibilityLabel("Apple Music to Discord")
+            updateStatusItem(for: .stopped)
+        }
 
         let notificationCenter = DistributedNotificationCenter.default()
         rpc.onConnect { _ in
@@ -146,7 +144,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
                 object: nil
             )
         }
-        rpc.onDisconnect { _, code, message in
+        rpc.onDisconnect { _, _, _ in
             self.RPCConnected = false
 
             notificationCenter.removeObserver(
@@ -168,8 +166,13 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             self.getCurrentTrack()
         }
 
-        self.sharedData.appleMusicRunning = AMAppSB?.isRunning ?? false
+        let appleMusicRunning = AMAppSB?.isRunning ?? false
+        self.sharedData.appleMusicRunning = appleMusicRunning
         self.sharedData.discordRunning = RPCConnected
+        if !appleMusicRunning, sharedData.playbackState != .stopped {
+            sharedData.playbackState = .stopped
+            updateStatusItem(for: .stopped)
+        }
 
         DispatchQueue.main.asyncAfter(deadline: .now() + 1, execute: loop)
     }
@@ -185,6 +188,16 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         }
 
         if let currentAMTrack = self.AMApp?.currentTrack as? MusicTrack {
+            let playerState: PlaybackState
+            switch self.AMApp?.playerState {
+            case .playing:
+                playerState = .playing
+            case .paused:
+                playerState = .paused
+            default:
+                playerState = .stopped
+            }
+
             self.updateTrack(
                 notification: .init(
                     name: NSNotification.Name(rawValue: "com.apple.Music.playerInfo"),
@@ -193,11 +206,21 @@ class AppDelegate: NSObject, NSApplicationDelegate {
                         "Album": currentAMTrack.album as Any,
                         "Artist": currentAMTrack.artist as Any,
                         "Total Time": Int((currentAMTrack.finish ?? 0) * 1000) as Any,
-                        "Player State": self.AMApp?.playerState == .playing ? "Playing" : "Paused"
+                        "Player State": playerState.rawValue
                     ]
                 )
             )
         }
+    }
+
+    private func updateStatusItem(for playbackState: PlaybackState) {
+        guard let button = statusBarItem?.button else {
+            return
+        }
+
+        button.title = "M2D \(playbackState.indicator)"
+        button.toolTip = "Apple Music to Discord — \(playbackState.rawValue)"
+        button.setAccessibilityValue(playbackState.rawValue)
     }
 
     @objc func showPopover(_ sender: AnyObject?) {

@@ -10,16 +10,16 @@ import Foundation
 class CurrentSong: ObservableObject {
     @Published
     var name: String = " Music 2 Discord"
-    
+
     @Published
     var album: String = "Waiting for  Music"
 
     @Published
     var artist: String = "To send song."
-    
+
     @Published
     var image: String = ""
-    
+
     @Published
     var state: String = ""
 
@@ -29,7 +29,7 @@ class CurrentSong: ObservableObject {
     init() {
 
     }
-    
+
     /// Set current song
     /// - Parameters:
     ///   - name: Song name

@@ -7,5 +7,6 @@
 
 import Foundation
 
-// TODO: CHANGE ME.
+// WARNING: CHANGE ME.
 let DISCORD_API_KEY: String = "YOUR_DISCORD_API_KEY"
+// swiftlint:disable:previous identifier_name

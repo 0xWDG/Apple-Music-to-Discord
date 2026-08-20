@@ -3,21 +3,23 @@
 
 Muestra tu estado de reproducción de Apple Music en Discord.
 
+<!--
 <a href='https://github.com/0xWDG/Apple-Music-to-Discord/raw/main/AM2D.zip'>
   <img alt="Download" src="https://img.shields.io/badge/Download-Beta-6bbee8?style=for-the-badge">
 </a>
+-->
  
 # Funciones completadas
 - [x] Leer información de la canción actual desde Apple Music
 - [x] Actualizar la presencia de Discord para mostrar la información
 - [x] Obtener la portada del álbum
-- [ ] Soporte de indicador para estados de Detenido/Reproduciendo/Pausa
+- [x] Soporte de indicador para estados de Detenido/Reproduciendo/Pausa
 - [x] Eliminar el requisito de iniciar Discord primero (reintentar conexión al fallar)
 - [x] Verificar si Apple Music ha iniciado para la información inicial de la canción (ahora la información se obtendrá al conectar con Discord)
 - [x] Hacer que los botones `<` (atrás), `=` (pausa), `>` (siguiente) funcionen.
 - [x] ~~Eliminar el spinner si falla la carga de la portada.~~ El spinner ahora tiene el mismo tamaño que la portada y se ocultará si falla.
-- [ ] Soporte para inicio automático al iniciar sesión
-- [ ] Mejor manejo de errores
+- [x] Soporte para inicio automático al iniciar sesión
+- [x] Mejor manejo de errores
 
 # Cómo usar
 

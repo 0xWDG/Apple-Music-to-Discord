@@ -1,5 +1,5 @@
 //
-//  File.swift
+//  ContentView.swift
 //  AM2D
 //
 //  Created by Wesley de Groot on 01/12/2023.
@@ -26,6 +26,9 @@ struct ContentView: View {
     @EnvironmentObject
     var sharedData: SharedData
 
+    @StateObject
+    private var launchAtLogin = LaunchAtLoginManager()
+
     @State
     var fancyBG: Bool = false
 
@@ -46,17 +49,21 @@ struct ContentView: View {
             VStack {
                 if currentSong.image.hasPrefix("http") {
                     AsyncImage(url: URL(string: currentSong.image))
+                        .accessibilityLabel("Album artwork for \(currentSong.name)")
                 }
             }
             .frame(width: 100, height: 100)
 
             Form {
-                LabeledContent(
-                    "Status",
-                    value: sharedData.isPlaying
-                    ? "► (Playing)"
-                    : "⏸︎ (Paused)"
-                )
+                LabeledContent("Status") {
+                    Label(
+                        sharedData.playbackState.rawValue,
+                        systemImage: sharedData.playbackState.systemImage
+                    )
+                    .accessibilityLabel(
+                        "Playback status: \(sharedData.playbackState.rawValue)"
+                    )
+                }
                 LabeledContent(
                     "Song",
                     value: currentSong.name
@@ -69,6 +76,22 @@ struct ContentView: View {
                     "Album",
                     value: currentSong.album
                 )
+
+                Toggle(
+                    "Launch at Login",
+                    isOn: Binding(
+                        get: { launchAtLogin.isEnabled },
+                        set: { launchAtLogin.setEnabled($0) }
+                    )
+                )
+                .accessibilityHint("Starts Apple Music to Discord when you log in")
+
+                if let statusMessage = launchAtLogin.statusMessage {
+                    Text(statusMessage)
+                        .font(.caption)
+                        .foregroundStyle(.secondary)
+                        .accessibilityLabel("Launch at login: \(statusMessage)")
+                }
             }
 
             HStack {
@@ -76,16 +99,22 @@ struct ContentView: View {
                     AM(action: "play previous track")
                 })
                 .focusable(false)
+                .accessibilityLabel("Previous track")
+                .accessibilityHint("Plays the previous track in Apple Music")
 
                 Button("⏯︎", action: {
                     AM(action: "playpause")
                 })
                 .focusable(false)
+                .accessibilityLabel("Play or pause")
+                .accessibilityHint("Toggles playback in Apple Music")
 
                 Button("⏩︎", action: {
                     AM(action: "next track")
                 })
                 .focusable(false)
+                .accessibilityLabel("Next track")
+                .accessibilityHint("Plays the next track in Apple Music")
             }
 
             if sharedData.debug {
@@ -98,11 +127,8 @@ struct ContentView: View {
                             : .red
                         )
 
-                    Text(
-                        sharedData.isPlaying
-                        ? "►"
-                        : "⏸︎"
-                    )
+                    Text(sharedData.playbackState.indicator)
+                        .accessibilityLabel(sharedData.playbackState.rawValue)
 
                     Text("Apple Music ")
                         .foregroundColor(
@@ -116,6 +142,7 @@ struct ContentView: View {
             Button("Quit", action: {
                 NSApplication.shared.terminate(.none)
             })
+            .accessibilityLabel("Quit Apple Music to Discord")
         }
         .background {
             if fancyBG {
@@ -151,10 +178,12 @@ struct ContentView: View {
         DispatchQueue.global().async {
             let scpt = "tell application \"Music\" to \(action)"
             if let script = NSAppleScript(source: scpt) {
-                var errDict: AutoreleasingUnsafeMutablePointer<NSDictionary?>?
-                script.executeAndReturnError(errDict)
+                var errorInfo: NSDictionary?
+                script.executeAndReturnError(&errorInfo)
                 log.debug("\(scpt)")
-                log.error("\(String(describing: errDict))")
+                if let errorInfo {
+                    log.error("Apple Music command failed: \(errorInfo)")
+                }
                 log.debug("\(String(describing: script))")
             }
         }
@@ -165,5 +194,6 @@ struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
             .environmentObject(CurrentSong())
+            .environmentObject(SharedData())
     }
 }

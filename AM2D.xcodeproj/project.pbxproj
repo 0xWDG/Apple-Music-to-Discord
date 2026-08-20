@@ -14,6 +14,7 @@
 		2B4D360D2CE9F13D002D9C00 /* SharedData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B4D360B2CE9F13D002D9C00 /* SharedData.swift */; };
 		2B4D360E2CE9F13D002D9C00 /* CurrentSong.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B4D360A2CE9F13D002D9C00 /* CurrentSong.swift */; };
 		2B4D36102CE9F30E002D9C00 /* DISCORD_API_KEY.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B4D360F2CE9F30E002D9C00 /* DISCORD_API_KEY.swift */; };
+		2B4D36122CE9F400002D9C00 /* LaunchAtLoginManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B4D36112CE9F400002D9C00 /* LaunchAtLoginManager.swift */; };
 		6695137F2516B047002ECA43 /* AM2DApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6695137E2516B047002ECA43 /* AM2DApp.swift */; };
 		669513812516B047002ECA43 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 669513802516B047002ECA43 /* ContentView.swift */; };
 		669513832516B047002ECA43 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 669513822516B047002ECA43 /* Assets.xcassets */; };
@@ -29,6 +30,7 @@
 		2B4D360A2CE9F13D002D9C00 /* CurrentSong.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentSong.swift; sourceTree = "<group>"; };
 		2B4D360B2CE9F13D002D9C00 /* SharedData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedData.swift; sourceTree = "<group>"; };
 		2B4D360F2CE9F30E002D9C00 /* DISCORD_API_KEY.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DISCORD_API_KEY.swift; sourceTree = "<group>"; };
+		2B4D36112CE9F400002D9C00 /* LaunchAtLoginManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchAtLoginManager.swift; sourceTree = "<group>"; };
 		660799B02564CD36005FC244 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		660799B12564CE30005FC244 /* LICENSE.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = LICENSE.md; sourceTree = "<group>"; };
 		6695137B2516B047002ECA43 /* AM2D.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AM2D.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -73,6 +75,7 @@
 		2B4D360C2CE9F13D002D9C00 /* Observables */ = {
 			isa = PBXGroup;
 			children = (
+				2B4D36112CE9F400002D9C00 /* LaunchAtLoginManager.swift */,
 				2B4D360A2CE9F13D002D9C00 /* CurrentSong.swift */,
 				2B4D360B2CE9F13D002D9C00 /* SharedData.swift */,
 			);
@@ -199,6 +202,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2B4D36122CE9F400002D9C00 /* LaunchAtLoginManager.swift in Sources */,
 				2B4D36082CE9F129002D9C00 /* iTunesApplication.swift in Sources */,
 				2B4D36092CE9F129002D9C00 /* MusicBridge.swift in Sources */,
 				2B4D360D2CE9F13D002D9C00 /* SharedData.swift in Sources */,

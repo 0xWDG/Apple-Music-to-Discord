@@ -3,28 +3,30 @@
 
 Display your Apple Music play status to Discord.
 
+<!--
 <a href='https://github.com/0xWDG/Apple-Music-to-Discord/raw/main/AM2D.zip'>
   <img alt="Download" src="https://img.shields.io/badge/Download-Beta-6bbee8?style=for-the-badge">
 </a>
- 
+-->
+
 # Functions finished
 - [x] Read current song info from Apple Music
 - [x] Update Discord presence to show information
 - [x] Fetch album art
-- [ ] Support Indicator for Stopped/Playing/Pause status
+- [x] Support Indicator for Stopped/Playing/Pause status
 - [x] Remove requirement to start Discord first (retry connecting when failed)
 - [x] Check if Apple Music has started, for initial song info (now the song info will be fetched when connected to Discord)
 - [x] Make `<` (back), `=` (pause), `>` (next) buttons work.
 - [x] ~~Remove spinner if loading of artwork fails.~~ Spinner now have the same size as the artwork, and will hide if failed.
-- [ ] Support auto start at login
-- [ ] Better error handling
+- [x] Support auto start at login
+- [x] Better error handling
 
 # How to use 
 
 Open `AM2D.xcodeproj` and change `DISCORD_API_KEY.swift` to include your own Discord API key.  
 You can create one (for free) at https://discord.com/developers/applications
 
-Be sure to go to `YOUR_APP_NAME` -> `Settings` -> `Rich Presence` -> `Art Assets` and upload the Apple Music logo there (called `am`) or use the logo of your own app.
+Be sure to go to `YOUR_APP_NAME` -> `Settings` -> `Rich Presence` -> `Art Assets` and upload the Apple Music logo there (called `am`) or use the logo of your own app. Add status assets called `play`, `pause`, and `stop` to show the current playback state in Discord.
 
 # Debugging
 
